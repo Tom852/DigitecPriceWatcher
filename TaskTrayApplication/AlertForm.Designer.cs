@@ -54,11 +54,11 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label2
+            // whichProductLabel
             // 
             this.whichProductLabel.AutoSize = true;
             this.whichProductLabel.Location = new System.Drawing.Point(29, 191);
-            this.whichProductLabel.Name = "label2";
+            this.whichProductLabel.Name = "whichProductLabel";
             this.whichProductLabel.Size = new System.Drawing.Size(35, 13);
             this.whichProductLabel.TabIndex = 2;
             this.whichProductLabel.Text = "label2";
@@ -72,7 +72,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Name = "AlertForm";
-            this.Text = "AlertForm";
+            this.Text = "Digitec Price Watcher Alert";
             this.ResumeLayout(false);
             this.PerformLayout();
 

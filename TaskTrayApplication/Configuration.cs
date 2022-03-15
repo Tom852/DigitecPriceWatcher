@@ -31,25 +31,30 @@ namespace TaskTrayApplication
         public Configuration()
         {
             InitializeComponent();
-            var data = PropertiesReader.GetData();
-
-            for (int i = 0; i < data.Count; i++)
-            {
-                AddTextBoxes();
-            }
+            InitializesBoxes();
         }
 
-        private void OnShow(object sender, EventArgs e)
+        private void InitializesBoxes()
         {
             var data = PropertiesReader.GetData();
 
             for (int i = 0; i < data.Count; i++)
             {
+                AddTextBoxes();
                 productBoxes[i].Text = data[i].Item1;
                 priceBoxes[i].Text = data[i].Item2.ToString();
             }
-
         }
+
+        private void OnShow(object sender, EventArgs e)
+        {
+            // layout is not redrawn everytime it's shown by default... if the user previously clicked cancel may cause index errors.
+            // ka wie das besser geht. refresh is not working.
+
+            RefreshBoxes();
+        }
+
+
 
         private void AddTextBoxes()
         {
@@ -164,6 +169,36 @@ namespace TaskTrayApplication
         private void addButton_Click(object sender, EventArgs e)
         {
             AddTextBoxes();
+        }
+
+        private void RefreshBoxes()
+        {
+            foreach (var control in this.productBoxes)
+            {
+                this.Controls.Remove(control);
+            }
+
+            foreach (var control in this.priceBoxes)
+            {
+                this.Controls.Remove(control);
+            }
+
+            foreach (var control in this.currPrices)
+            {
+                this.Controls.Remove(control);
+            }
+
+            foreach (var control in this.rmvButtons)
+            {
+                this.Controls.Remove(control);
+            }
+
+            this.productBoxes.Clear();
+            this.priceBoxes.Clear();
+            this.currPrices.Clear();
+            this.rmvButtons.Clear();
+
+            InitializesBoxes();
         }
     }
 }

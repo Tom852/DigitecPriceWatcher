@@ -1,6 +1,9 @@
-(English and German version below)
+
 
 # DigitecPriceWatcher
+(text is English and German)
+![Graph](/DemoPics/02.png "examplePriceGraph")
+
 Dies ist eine kleine Tray-App, die auf Digitec/Galaxus die Preise von Produkten überprüft. Sinken diese unter ein gewisses Limit, wird ein Alarm ausgegeben. Hintergrund der Applikation sind die stark schwankenden Preise im Technikmarkt, und keiner zahlt gern mehr als er muss. Die Applikation wurde nach der 80/20 Regel erstellt und hat noch einige Bugs und funktioneirt möglicherweise nicht 100% zuverlässig, aber es ist besser als nichts.
 
 This is a little task tray application which periodically checks prices of products on Digitec / Galaxus (Swiss internet shop) and horns with a more or less aggressive alert if the price drops below a certain limit. I made this application in response to the very volatile prices and I don't like paying more than I have to. The app is quite 80/20 and may not work in all cases, but generally does its job.
@@ -19,4 +22,4 @@ Start app, locate the money sack tray icon and double/right click it. Enter your
 
 ![Screenshot](/DemoPics/01.png "Screenshot")
 
-![Graph](/DemoPics/02.png "examplePriceGraph")
+

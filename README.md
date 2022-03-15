@@ -18,3 +18,5 @@ Nachdem man die exe gestartet hat, ist unten rechts bei den Windows Symbolen ein
 Start app, locate the money sack tray icon and double/right click it. Enter your product-urls (supports digitec.ch and galaxus.ch only) and price limits. Click Save.
 
 ![Screenshot](/DemoPics/01.png "Screenshot")
+
+![Graph](/DemoPics/02.png "examplePriceGraph")
